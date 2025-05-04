@@ -4,9 +4,14 @@ import { app, BrowserWindow } from 'electron';
 
 const createWindow = () => {
     const window = new BrowserWindow({
-	height: 600,
-	width: 800
+	autoHideMenuBar: true,
+	transparent: true,
+	resizable: false,
+	frame: false,
+	height: 500,
+	width: 500,
     });
+    window.setAlwaysOnTop(true, 'pop-up-menu');
     window.loadFile('index.html');
 }
 

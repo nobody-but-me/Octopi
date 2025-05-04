@@ -4,6 +4,8 @@
     "description": "A tiny and little octopi",
     "main": "index.js",
     "dependencies": {
+	"@tailwindcss/cli": "^4.1.5",
+	"@tailwindcss/vite": "^4.1.5",
 	"boolean": "^3.2.0",
 	"buffer-crc32": "^0.2.13",
 	"cacheable-lookup": "^5.0.4",
@@ -64,12 +66,25 @@
 	"yauzl": "^2.10.0"
     },
     "devDependencies": {
-	"electron": "^36.1.0"
+	"autoprefixer": "^10.4.21",
+	"electron": "^36.1.0",
+	"postcss": "^8.5.3",
+	"tailwindcss": "^4.1.5",
+	"vite": "^6.3.4"
     },
     "scripts": {
 	"test": "echo \"Error: no test specified\" && exit 1",
-	"start": "electron . --no-sandbox --disabled-gpu"
-  },
-  "author": "Daniel N. Teixeira",
-  "license": "MIT"
+	"start": "npx @tailwindcss/cli -i ./styles.css -o ./output.css && electron . --no-sandbox --disabled-gpu"
+    },
+    "author": "Daniel N. Teixeira",
+    "license": "MIT",
+    "repository": {
+	"type": "git",
+	"url": "git+https://github.com/nobody-but-me/Octopi.git"
+    },
+    "keywords": [],
+    "bugs": {
+	"url": "https://github.com/nobody-but-me/Octopi/issues"
+    },
+    "homepage": "https://github.com/nobody-but-me/Octopi#readme"
 }
